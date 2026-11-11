@@ -1,0 +1,35 @@
+{
+    "count": 6,
+    "graphs": [
+        {
+            "id": 1,
+            "file": "fig1.json",
+            "title": "Polar Chart of War Attack Over Players (War IN/OUT)"
+        },
+        {
+            "id": 2,
+            "file": "fig2.json",
+            "title": "Polar Chart of Clan Capital Over Players (War IN/OUT)"
+        },
+        {
+            "id": 3,
+            "file": "fig3.json",
+            "title": "Polar Chart of Clan Games Over Players (War IN/OUT)"
+        },
+        {
+            "id": 4,
+            "file": "fig4.json",
+            "title": "Polar Chart of Clan Games Maxed Over Players (War IN/OUT)"
+        },
+        {
+            "id": 5,
+            "file": "fig5.json",
+            "title": "Polar Chart of Clan Score Over Players (War IN/OUT)"
+        },
+        {
+            "id": 6,
+            "file": "fig6.json",
+            "title": "Stacked Polar Chart of Numerical Values"
+        }
+    ]
+}

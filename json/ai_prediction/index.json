@@ -1,0 +1,30 @@
+{
+    "count": 5,
+    "graphs": [
+        {
+            "id": 1,
+            "file": "fig1.json",
+            "title": "warattack Forecast"
+        },
+        {
+            "id": 2,
+            "file": "fig2.json",
+            "title": "clancapital Forecast"
+        },
+        {
+            "id": 3,
+            "file": "fig3.json",
+            "title": "clangames Forecast"
+        },
+        {
+            "id": 4,
+            "file": "fig4.json",
+            "title": "clangamesmaxed Forecast"
+        },
+        {
+            "id": 5,
+            "file": "fig5.json",
+            "title": "clanscore Forecast"
+        }
+    ]
+}

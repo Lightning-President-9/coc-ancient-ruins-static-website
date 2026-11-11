@@ -1,0 +1,25 @@
+{
+    "count": 4,
+    "graphs": [
+        {
+            "id": 1,
+            "file": "fig1.json",
+            "title": "Monthly Clan Performance"
+        },
+        {
+            "id": 2,
+            "file": "fig2.json",
+            "title": "Monthly Clan Performance (Bar Graph)"
+        },
+        {
+            "id": 3,
+            "file": "fig3.json",
+            "title": "Hierarchical Clan Performance Breakdown"
+        },
+        {
+            "id": 4,
+            "file": "fig4.json",
+            "title": "Monthly Clan Performance (Area Chart)"
+        }
+    ]
+}

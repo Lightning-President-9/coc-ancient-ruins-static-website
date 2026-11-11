@@ -1,0 +1,30 @@
+{
+    "count": 5,
+    "graphs": [
+        {
+            "id": 1,
+            "file": "fig1.json",
+            "title": "War Attack Distribution"
+        },
+        {
+            "id": 2,
+            "file": "fig2.json",
+            "title": "Clan Capital Distribution"
+        },
+        {
+            "id": 3,
+            "file": "fig3.json",
+            "title": "Clan Games Distribution"
+        },
+        {
+            "id": 4,
+            "file": "fig4.json",
+            "title": "Clan Games Maxed Distribution"
+        },
+        {
+            "id": 5,
+            "file": "fig5.json",
+            "title": "Clan Score Distribution"
+        }
+    ]
+}

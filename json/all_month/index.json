@@ -1,0 +1,40 @@
+{
+    "summary": {
+        "path": "summary/index.json",
+        "count": 4
+    },
+    "heatmap": {
+        "path": "heatmap/index.json",
+        "count": 5
+    },
+    "months": [
+        "JUN-JUL_2024",
+        "JUL-AUG_2024",
+        "AUG-SEP_2024",
+        "SEP-OCT_2024",
+        "OCT-NOV_2024",
+        "NOV-DEC_2024",
+        "DEC-JAN_2025",
+        "JAN-FEB_2025",
+        "FEB-MAR_2025",
+        "MAR-APR_2025",
+        "APR-MAY_2025",
+        "MAY-JUN_2025",
+        "JUN-JUL_2025",
+        "JUL-AUG_2025",
+        "AUG-SEP_2025",
+        "SEP-OCT_2025",
+        "OCT-NOV_2025",
+        "NOV-DEC_2025",
+        "DEC-JAN_2026",
+        "JAN-FEB_2026",
+        "FEB-MAR_2026",
+        "MAR-APR_2026",
+        "APR-MAY_2026",
+        "MAY-JUN_2026",
+        "JUN-JUL_2026",
+        "JUL-AUG_2026",
+        "AUG-SEP_2026",
+        "SEP-OCT_2026"
+    ]
+}

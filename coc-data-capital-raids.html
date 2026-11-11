@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Capital Raids | Ancient Ruins</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="static/clan-badge_19.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="nav-item">
+          <img src="/static/nav-bar-icons/home_img.png" alt="Home" class="nav-icon">
+        </a>
+        <div class="dropdown">
+          <a class="nav-item">
+            <img src="/static/nav-bar-icons/api_img.png" alt="API" class="nav-icon">
+          </a>
+          <div class="dropdown-content">
+            <a href="http://localhost:8000/json/clan_members_table_data.json">Clan Members API</a>
+            <a href="http://localhost:8000/json/former_clan_members_table_data.json">Former Members API</a>
+            <a href="http://localhost:8000/json/top_clan_contributors_data.json">Top Contributors API</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="nav-item">
+            <img src="static/nav-bar-icons/graph_img.png" alt="Graphs" class="nav-icon">
+          </a>
+          <div class="dropdown-content">
+            <a href="graph.html">Graphs</a>
+            <a href="all-mon-graph.html">All Months Graphs</a>
+          </div>
+        </div>
+        <a href="dashboard.html" class="nav-item">
+          <img src="/static/nav-bar-icons/player-analytics_img.png" alt="Analytics" class="nav-icon">
+        </a>
+        <div class="dropdown">
+          <a href="#" class="nav-item">
+            <img src="static/nav-bar-icons/ai_img.png" alt="AI" class="nav-icon">
+          </a>
+          <div class="dropdown-content">
+            <a href="ai-prediction.html">AI Prediction</a>
+            <a href="ai-cluster.html">AI Cluster</a>
+            <a href="ai-chat.html">AR STATS BOT</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="nav-item">
+            <img src="static/nav-bar-icons/github_img.png" alt="GitHub" class="nav-icon">
+          </a>
+          <div class="dropdown-content">
+            <a href="https://github.com/Lightning-President-9/coc-ancient-ruins-website">Website Repo</a>
+            <a href="https://github.com/Lightning-President-9/ClanDataRepo">Clan Data Repo</a>
+          </div>
+        </div>
+        <a href="https://link.clashofclans.com/en?action=OpenClanProfile&tag=2PP0P22CQ" class="nav-item">
+          <img src="/static/nav-bar-icons/invite_img.png" alt="Invite" class="nav-icon">
+        </a>
+        <a href="https://discord.gg/XyucEsBhGs" class="nav-item">
+          <img src="/static/nav-bar-icons/discord_img.png" alt="Discord" class="nav-icon">
+        </a>
+        <a href="coc-data.html" class="nav-item">
+          <img src="static/nav-bar-icons/coc-data_img.png" alt="COC Data" class="nav-icon">
+        </a>
+        <a href="#" class="nav-item" id="capture-page" title="Take Screenshot">
+          <img src="static/nav-bar-icons/screenshot_img.png" alt="Screenshot" class="nav-icon">
+        </a>
+      </nav>
+      <script src="js/screenshot.js"></script>
+      <div class="main-table">
+        <section class="table-header">
+          <h2>Attacks</h2>
+        </section>
+        <div class="isclaimers">
+          <p>
+            <a href="http://localhost:8000/coc-data-capital-raids-attacks-latest.html">http://localhost:8000/coc-data-capital-raids-attacks-latest.html</a>
+          </p>
+          <p>
+            <a href="http://localhost:8000/coc-data-capital-raids-attacks-all.html">http://localhost:8000/coc-data-capital-raids-attacks-all.html</a>
+          </p>
+        </div>
+      </div>
+      <div class="main-table">
+        <section class="table-header">
+          <h2>Defences</h2>
+        </section>
+        <div class="isclaimers">
+          <p>
+            <a href="http://localhost:8000/coc-data-capital-raids-defences-latest.html">http://localhost:8000/coc-data-capital-raids-defences-latest.html</a>
+          </p>
+          <p>
+            <a href="http://localhost:8000/coc-data-capital-raids-defences-all.html">http://localhost:8000/coc-data-capital-raids-defences-all.html</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

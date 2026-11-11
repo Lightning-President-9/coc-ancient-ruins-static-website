@@ -1,0 +1,40 @@
+{
+    "count": 7,
+    "graphs": [
+        {
+            "id": 1,
+            "file": "fig1.json",
+            "title": "Player Status Distribution"
+        },
+        {
+            "id": 2,
+            "file": "fig2.json",
+            "title": "War Participation Distribution"
+        },
+        {
+            "id": 3,
+            "file": "fig3.json",
+            "title": "War Attacks Distribution"
+        },
+        {
+            "id": 4,
+            "file": "fig4.json",
+            "title": "Clan Capital Distribution"
+        },
+        {
+            "id": 5,
+            "file": "fig5.json",
+            "title": "Clan Games Distribution"
+        },
+        {
+            "id": 6,
+            "file": "fig6.json",
+            "title": "Clan Games Maxed Distribution"
+        },
+        {
+            "id": 7,
+            "file": "fig7.json",
+            "title": "Clan Score Distribution"
+        }
+    ]
+}

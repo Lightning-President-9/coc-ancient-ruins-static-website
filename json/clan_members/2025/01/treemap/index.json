@@ -1,0 +1,30 @@
+{
+    "count": 5,
+    "graphs": [
+        {
+            "id": 1,
+            "file": "fig1.json",
+            "title": "Treemap of War Attack by War Status"
+        },
+        {
+            "id": 2,
+            "file": "fig2.json",
+            "title": "Treemap of Clan Capital by Player Status"
+        },
+        {
+            "id": 3,
+            "file": "fig3.json",
+            "title": "Treemap of Clan Games by Player Status"
+        },
+        {
+            "id": 4,
+            "file": "fig4.json",
+            "title": "Treemap of Clan Games Maxed by Player Status"
+        },
+        {
+            "id": 5,
+            "file": "fig5.json",
+            "title": "Treemap of Clan Score by Player Status"
+        }
+    ]
+}

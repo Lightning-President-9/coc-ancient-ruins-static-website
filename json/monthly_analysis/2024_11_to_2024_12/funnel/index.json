@@ -1,0 +1,30 @@
+{
+    "count": 5,
+    "graphs": [
+        {
+            "id": 1,
+            "file": "fig1.json",
+            "title": "Funnel Chart for War Attack"
+        },
+        {
+            "id": 2,
+            "file": "fig2.json",
+            "title": "Funnel Chart for Clan Capital"
+        },
+        {
+            "id": 3,
+            "file": "fig3.json",
+            "title": "Funnel Chart for Clan Games"
+        },
+        {
+            "id": 4,
+            "file": "fig4.json",
+            "title": "Funnel Chart for Clan Games Maxed"
+        },
+        {
+            "id": 5,
+            "file": "fig5.json",
+            "title": "Funnel Chart for Clan Score"
+        }
+    ]
+}

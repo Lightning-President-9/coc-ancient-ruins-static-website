@@ -1,0 +1,55 @@
+{
+    "count": 10,
+    "graphs": [
+        {
+            "id": 1,
+            "file": "fig1.json",
+            "title": "3D Scatter Plot of warattack vs clancapital vs clangames"
+        },
+        {
+            "id": 2,
+            "file": "fig2.json",
+            "title": "3D Scatter Plot of warattack vs clancapital vs clangamesmaxed"
+        },
+        {
+            "id": 3,
+            "file": "fig3.json",
+            "title": "3D Scatter Plot of warattack vs clancapital vs clanscore"
+        },
+        {
+            "id": 4,
+            "file": "fig4.json",
+            "title": "3D Scatter Plot of warattack vs clangames vs clangamesmaxed"
+        },
+        {
+            "id": 5,
+            "file": "fig5.json",
+            "title": "3D Scatter Plot of warattack vs clangames vs clanscore"
+        },
+        {
+            "id": 6,
+            "file": "fig6.json",
+            "title": "3D Scatter Plot of warattack vs clangamesmaxed vs clanscore"
+        },
+        {
+            "id": 7,
+            "file": "fig7.json",
+            "title": "3D Scatter Plot of clancapital vs clangames vs clangamesmaxed"
+        },
+        {
+            "id": 8,
+            "file": "fig8.json",
+            "title": "3D Scatter Plot of clancapital vs clangames vs clanscore"
+        },
+        {
+            "id": 9,
+            "file": "fig9.json",
+            "title": "3D Scatter Plot of clancapital vs clangamesmaxed vs clanscore"
+        },
+        {
+            "id": 10,
+            "file": "fig10.json",
+            "title": "3D Scatter Plot of clangames vs clangamesmaxed vs clanscore"
+        }
+    ]
+}

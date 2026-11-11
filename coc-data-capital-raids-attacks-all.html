@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Capital Raid Attacks All | Ancient Ruins</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="static/clan-badge_19.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="nav-item">
+          <img src="/static/nav-bar-icons/home_img.png" alt="Home" class="nav-icon">
+        </a>
+        <div class="dropdown">
+          <a class="nav-item">
+            <img src="/static/nav-bar-icons/api_img.png" alt="API" class="nav-icon">
+          </a>
+          <div class="dropdown-content">
+            <a href="http://localhost:8000/json/clan_members_table_data.json">Clan Members API</a>
+            <a href="http://localhost:8000/json/former_clan_members_table_data.json">Former Members API</a>
+            <a href="http://localhost:8000/json/top_clan_contributors_data.json">Top Contributors API</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="nav-item">
+            <img src="static/nav-bar-icons/graph_img.png" alt="Graphs" class="nav-icon">
+          </a>
+          <div class="dropdown-content">
+            <a href="graph.html">Graphs</a>
+            <a href="all-mon-graph.html">All Months Graphs</a>
+          </div>
+        </div>
+        <a href="dashboard.html" class="nav-item">
+          <img src="/static/nav-bar-icons/player-analytics_img.png" alt="Analytics" class="nav-icon">
+        </a>
+        <div class="dropdown">
+          <a href="#" class="nav-item">
+            <img src="static/nav-bar-icons/ai_img.png" alt="AI" class="nav-icon">
+          </a>
+          <div class="dropdown-content">
+            <a href="ai-prediction.html">AI Prediction</a>
+            <a href="ai-cluster.html">AI Cluster</a>
+            <a href="ai-chat.html">AR STATS BOT</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="nav-item">
+            <img src="static/nav-bar-icons/github_img.png" alt="GitHub" class="nav-icon">
+          </a>
+          <div class="dropdown-content">
+            <a href="https://github.com/Lightning-President-9/coc-ancient-ruins-website">Website Repo</a>
+            <a href="https://github.com/Lightning-President-9/ClanDataRepo">Clan Data Repo</a>
+          </div>
+        </div>
+        <a href="https://link.clashofclans.com/en?action=OpenClanProfile&tag=2PP0P22CQ" class="nav-item">
+          <img src="/static/nav-bar-icons/invite_img.png" alt="Invite" class="nav-icon">
+        </a>
+        <a href="https://discord.gg/XyucEsBhGs" class="nav-item">
+          <img src="/static/nav-bar-icons/discord_img.png" alt="Discord" class="nav-icon">
+        </a>
+        <a href="coc-data.html" class="nav-item">
+          <img src="static/nav-bar-icons/coc-data_img.png" alt="COC Data" class="nav-icon">
+        </a>
+        <a href="#" class="nav-item" id="capture-page" title="Take Screenshot">
+          <img src="static/nav-bar-icons/screenshot_img.png" alt="Screenshot" class="nav-icon">
+        </a>
+      </nav>
+      <script src="js/screenshot.js"></script>
+      <main class="main-table">
+        <section class="table-header">
+          <h2>Total Raids</h2>
+          <div class="export__file">
+            <label for="export-file-main-member-1" class="export__file-btn" title="Export File" style="
+          background: #fff6 url('/static/home-page-icons/export_img_final.png') center / 65% no-repeat;
+       "></label>
+            <input type="checkbox" id="export-file-main-member-1">
+            <div class="export__file-options">
+              <label>Export As &nbsp; &#10140;</label>
+              <label for="export-file-main-member-1" id="toPDFClanCapitalTotalRaids">PDF <img src="/static/home-page-icons/pdf_icon_img_final.png" alt="PDF">
+              </label>
+              <label for="export-file-main-member-1" id="toJSONClanCapitalTotalRaids">JSON <img src="/static/home-page-icons/json_icon_img_final.png" alt="JSON">
+              </label>
+              <label for="export-file-main-member-1" id="toCSVClanCapitalTotalRaids">CSV <img src="/static/home-page-icons/csv_icon_img_final.png" alt="CSV">
+              </label>
+              <label for="export-file-main-member-1" id="toEXCELClanCapitalTotalRaids">EXCEL <img src="/static/home-page-icons/xls_icon_img_final.png" alt="Excel">
+              </label>
+            </div>
+          </div>
+          <div class="input-group">
+            <input type="search" placeholder="Search Data...">
+            <img src="/static/home-page-icons/search_img_final.png" alt="Search">
+          </div>
+        </section>
+        <section class="table-body">
+          <table>
+            <thead>
+              <tr>
+                <th>State <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Start Time <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>End Time <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Capital Total Loot <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Raids Completed <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Total Attacks <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Enemy Districts Destroyed <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Offensive Reward <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Defensive Reward <span class="icon-arrow">&UpArrow;</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="capital-raid-all-seasons-body"></tbody>
+          </table>
+        </section>
+      </main>
+      <main class="main-table">
+        <section class="table-header">
+          <h2>Attack Log</h2>
+          <div class="export__file">
+            <label for="export-file-main-member-2" class="export__file-btn" title="Export File" style="
+          background: #fff6 url('/static/home-page-icons/export_img_final.png') center / 65% no-repeat;
+       "></label>
+            <input type="checkbox" id="export-file-main-member-2">
+            <div class="export__file-options">
+              <label>Export As &nbsp; &#10140;</label>
+              <label for="export-file-main-member-2" id="toPDFClanCapitalAttackLog">PDF <img src="/static/home-page-icons/pdf_icon_img_final.png" alt="PDF">
+              </label>
+              <label for="export-file-main-member-2" id="toJSONClanCapitalAttackLog">JSON <img src="/static/home-page-icons/json_icon_img_final.png" alt="JSON">
+              </label>
+              <label for="export-file-main-member-2" id="toCSVClanCapitalAttackLog">CSV <img src="/static/home-page-icons/csv_icon_img_final.png" alt="CSV">
+              </label>
+              <label for="export-file-main-member-2" id="toEXCELClanCapitalAttackLog">EXCEL <img src="/static/home-page-icons/xls_icon_img_final.png" alt="Excel">
+              </label>
+            </div>
+          </div>
+          <div class="input-group">
+            <input type="search" placeholder="Search Data...">
+            <img src="/static/home-page-icons/search_img_final.png" alt="Search">
+          </div>
+        </section>
+        <section class="table-body">
+          <table>
+            <thead>
+              <tr>
+                <th>Start Time <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>End Time <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Tag <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Clan Name <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Level <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Clan Badge <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Attack Count <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>District Count <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Districts Destroyed <span class="icon-arrow">&UpArrow;</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="capital-raid-all-attack-log-body"></tbody>
+          </table>
+        </section>
+      </main>
+      <main class="main-table">
+        <section class="table-header">
+          <h2>Attack Log/Districts</h2>
+          <div class="export__file">
+            <label for="export-file-main-member-3" class="export__file-btn" title="Export File" style="
+          background: #fff6 url('/static/home-page-icons/export_img_final.png') center / 65% no-repeat;
+       "></label>
+            <input type="checkbox" id="export-file-main-member-3">
+            <div class="export__file-options">
+              <label>Export As &nbsp; &#10140;</label>
+              <label for="export-file-main-member-3" id="toPDFClanCapitalAttackLog/Districts">PDF <img src="/static/home-page-icons/pdf_icon_img_final.png" alt="PDF">
+              </label>
+              <label for="export-file-main-member-3" id="toJSONClanCapitalAttackLog/Districts">JSON <img src="/static/home-page-icons/json_icon_img_final.png" alt="JSON">
+              </label>
+              <label for="export-file-main-member-3" id="toCSVClanCapitalAttackLog/Districts">CSV <img src="/static/home-page-icons/csv_icon_img_final.png" alt="CSV">
+              </label>
+              <label for="export-file-main-member-3" id="toEXCELClanCapitalAttackLog/Districts">EXCEL <img src="/static/home-page-icons/xls_icon_img_final.png" alt="Excel">
+              </label>
+            </div>
+          </div>
+          <div class="input-group">
+            <input type="search" placeholder="Search Data...">
+            <img src="/static/home-page-icons/search_img_final.png" alt="Search">
+          </div>
+        </section>
+        <section class="table-body">
+          <table>
+            <thead>
+              <tr>
+                <th>Start Time <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>End Time <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Clan Name <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Clan Badge <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>District Name <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>District Hall Level <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Destruction Percent <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Attack Count <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Total Looted <span class="icon-arrow">&UpArrow;</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="capital-raid-all-attack-districts-body"></tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+    <script src="js/table-utils.js"></script>
+    <script src="js/capital-raids-attacks-all.js"></script>
+  </body>
+</html>

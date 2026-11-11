@@ -1,0 +1,30 @@
+{
+    "count": 5,
+    "graphs": [
+        {
+            "id": 1,
+            "file": "fig1.json",
+            "title": "Heatmap of warattack per month"
+        },
+        {
+            "id": 2,
+            "file": "fig2.json",
+            "title": "Heatmap of clancapital per month"
+        },
+        {
+            "id": 3,
+            "file": "fig3.json",
+            "title": "Heatmap of clangames per month"
+        },
+        {
+            "id": 4,
+            "file": "fig4.json",
+            "title": "Heatmap of clangamesmaxed per month"
+        },
+        {
+            "id": 5,
+            "file": "fig5.json",
+            "title": "Heatmap of clanscore per month"
+        }
+    ]
+}

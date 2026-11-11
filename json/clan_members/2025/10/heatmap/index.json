@@ -1,0 +1,60 @@
+{
+    "count": 11,
+    "graphs": [
+        {
+            "id": 1,
+            "file": "fig1.json",
+            "title": "Heatmap of warattack vs clancapital"
+        },
+        {
+            "id": 2,
+            "file": "fig2.json",
+            "title": "Heatmap of warattack vs clangames"
+        },
+        {
+            "id": 3,
+            "file": "fig3.json",
+            "title": "Heatmap of warattack vs clangamesmaxed"
+        },
+        {
+            "id": 4,
+            "file": "fig4.json",
+            "title": "Heatmap of warattack vs clanscore"
+        },
+        {
+            "id": 5,
+            "file": "fig5.json",
+            "title": "Heatmap of clancapital vs clangames"
+        },
+        {
+            "id": 6,
+            "file": "fig6.json",
+            "title": "Heatmap of clancapital vs clangamesmaxed"
+        },
+        {
+            "id": 7,
+            "file": "fig7.json",
+            "title": "Heatmap of clancapital vs clanscore"
+        },
+        {
+            "id": 8,
+            "file": "fig8.json",
+            "title": "Heatmap of clangames vs clangamesmaxed"
+        },
+        {
+            "id": 9,
+            "file": "fig9.json",
+            "title": "Heatmap of clangames vs clanscore"
+        },
+        {
+            "id": 10,
+            "file": "fig10.json",
+            "title": "Heatmap of clangamesmaxed vs clanscore"
+        },
+        {
+            "id": 11,
+            "file": "fig11.json",
+            "title": "Heatmap of War Status vs Player Status"
+        }
+    ]
+}

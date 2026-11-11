@@ -1,0 +1,80 @@
+{
+    "count": 15,
+    "graphs": [
+        {
+            "id": 1,
+            "file": "fig1.json",
+            "title": "Histogram of warattack"
+        },
+        {
+            "id": 2,
+            "file": "fig2.json",
+            "title": "Histogram of clancapital"
+        },
+        {
+            "id": 3,
+            "file": "fig3.json",
+            "title": "Histogram of clangames"
+        },
+        {
+            "id": 4,
+            "file": "fig4.json",
+            "title": "Histogram of clangamesmaxed"
+        },
+        {
+            "id": 5,
+            "file": "fig5.json",
+            "title": "Histogram of clanscore"
+        },
+        {
+            "id": 6,
+            "file": "fig6.json",
+            "title": "Histogram of warattack by War Status"
+        },
+        {
+            "id": 7,
+            "file": "fig7.json",
+            "title": "Histogram of clancapital by War Status"
+        },
+        {
+            "id": 8,
+            "file": "fig8.json",
+            "title": "Histogram of clangames by War Status"
+        },
+        {
+            "id": 9,
+            "file": "fig9.json",
+            "title": "Histogram of clangamesmaxed by War Status"
+        },
+        {
+            "id": 10,
+            "file": "fig10.json",
+            "title": "Histogram of clanscore by War Status"
+        },
+        {
+            "id": 11,
+            "file": "fig11.json",
+            "title": "Histogram of warattack by Status"
+        },
+        {
+            "id": 12,
+            "file": "fig12.json",
+            "title": "Histogram of clancapital by Status"
+        },
+        {
+            "id": 13,
+            "file": "fig13.json",
+            "title": "Histogram of clangames by Status"
+        },
+        {
+            "id": 14,
+            "file": "fig14.json",
+            "title": "Histogram of clangamesmaxed by Status"
+        },
+        {
+            "id": 15,
+            "file": "fig15.json",
+            "title": "Histogram of clanscore by Status"
+        }
+    ]
+}

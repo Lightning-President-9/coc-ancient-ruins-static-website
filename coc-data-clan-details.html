@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Clan Details | Ancient Ruins</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="./static/clan-badge_19.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="nav-item">
+          <img src="/static/nav-bar-icons/home_img.png" alt="Home" class="nav-icon">
+        </a>
+        <div class="dropdown">
+          <a class="nav-item">
+            <img src="/static/nav-bar-icons/api_img.png" alt="API" class="nav-icon">
+          </a>
+          <div class="dropdown-content">
+            <a href="http://localhost:8000/json/clan_members_table_data.json">Clan Members API</a>
+            <a href="http://localhost:8000/json/former_clan_members_table_data.json">Former Members API</a>
+            <a href="http://localhost:8000/json/top_clan_contributors_data.json">Top Contributors API</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="nav-item">
+            <img src="static/nav-bar-icons/graph_img.png" alt="Graphs" class="nav-icon">
+          </a>
+          <div class="dropdown-content">
+            <a href="graph.html">Graphs</a>
+            <a href="all-mon-graph.html">All Months Graphs</a>
+          </div>
+        </div>
+        <a href="dashboard.html" class="nav-item">
+          <img src="/static/nav-bar-icons/player-analytics_img.png" alt="Analytics" class="nav-icon">
+        </a>
+        <div class="dropdown">
+          <a href="#" class="nav-item">
+            <img src="static/nav-bar-icons/ai_img.png" alt="AI" class="nav-icon">
+          </a>
+          <div class="dropdown-content">
+            <a href="ai-prediction.html">AI Prediction</a>
+            <a href="ai-cluster.html">AI Cluster</a>
+            <a href="ai-chat.html">AR STATS BOT</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="nav-item">
+            <img src="static/nav-bar-icons/github_img.png" alt="GitHub" class="nav-icon">
+          </a>
+          <div class="dropdown-content">
+            <a href="https://github.com/Lightning-President-9/coc-ancient-ruins-website">Website Repo</a>
+            <a href="https://github.com/Lightning-President-9/ClanDataRepo">Clan Data Repo</a>
+          </div>
+        </div>
+        <a href="https://link.clashofclans.com/en?action=OpenClanProfile&tag=2PP0P22CQ" class="nav-item">
+          <img src="/static/nav-bar-icons/invite_img.png" alt="Invite" class="nav-icon">
+        </a>
+        <a href="https://discord.gg/XyucEsBhGs" class="nav-item">
+          <img src="/static/nav-bar-icons/discord_img.png" alt="Discord" class="nav-icon">
+        </a>
+        <a href="coc-data.html" class="nav-item">
+          <img src="static/nav-bar-icons/coc-data_img.png" alt="COC Data" class="nav-icon">
+        </a>
+        <a href="#" class="nav-item" id="capture-page" title="Take Screenshot">
+          <img src="static/nav-bar-icons/screenshot_img.png" alt="Screenshot" class="nav-icon">
+        </a>
+      </nav>
+      <script src="js/screenshot.js"></script>
+      <main class="main-clan-table">
+        <section class="table-header">
+          <h2>Ancient Ruins Clan Details</h2>
+        </section>
+        <div class="data-box">
+          <div class="img-box">
+            <div class="img">
+              <img id="clan-badge" src="./static/clan-badge_19.png" alt="Clan Badge">
+            </div>
+            <div class="p-data">
+              <strong>
+                <p>
+                  <u>FROM WHERE THE DATA IS COMING?</u>
+                </p>
+                <p>COC API</p>
+                <p>CLAN DETAILS</p>
+              </strong>
+            </div>
+          </div>
+          <section class="table-body">
+            <table>
+              <thead>
+                <tr>
+                  <td>
+                    <strong>Clan Tag:</strong>
+                  </td>
+                  <th data-clan-field="tag"></th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan Name:</strong>
+                  </td>
+                  <th data-clan-field="name"></th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan Type:</strong>
+                  </td>
+                  <th data-clan-field="type"></th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan Description:</strong>
+                  </td>
+                  <th data-clan-field="description"></th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan Location:</strong>
+                  </td>
+                  <th data-clan-field="location.name"></th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan Badge:</strong>
+                  </td>
+                  <th>
+                    <img data-clan-field="badgeUrls.small" alt="Clan Badge" width="40">
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan Level:</strong>
+                  </td>
+                  <th data-clan-field="clanLevel"></th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan Points:</strong>
+                  </td>
+                  <th data-clan-field="clanPoints"></th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan Builder Base Points:</strong>
+                  </td>
+                  <th data-clan-field="clanBuilderBasePoints"></th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan Capital Points:</strong>
+                  </td>
+                  <th data-clan-field="clanCapitalPoints"></th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan Capital League:</strong>
+                  </td>
+                  <th data-clan-field="capitalLeague.name"></th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan Required Trophies:</strong>
+                  </td>
+                  <th data-clan-field="requiredTrophies"></th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan War Frequency:</strong>
+                  </td>
+                  <th data-clan-field="warFrequency"></th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan War Win Streak:</strong>
+                  </td>
+                  <th data-clan-field="warWinStreak"></th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan War Wins:</strong>
+                  </td>
+                  <th data-clan-field="warWins"></th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan War Ties:</strong>
+                  </td>
+                  <th data-clan-field="warTies"></th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan War Losses:</strong>
+                  </td>
+                  <th data-clan-field="warLosses"></th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan War League:</strong>
+                  </td>
+                  <th data-clan-field="warLeague.name"></th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan Members:</strong>
+                  </td>
+                  <th data-clan-field="members"></th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan Required Builder Base Trophies:</strong>
+                  </td>
+                  <th data-clan-field="requiredBuilderBaseTrophies"></th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan Required Townhall Level:</strong>
+                  </td>
+                  <th data-clan-field="requiredTownhallLevel"></th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan Capital Hall Level:</strong>
+                  </td>
+                  <th data-clan-field="clanCapital.capitalHallLevel"></th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan Chat Language:</strong>
+                  </td>
+                  <th data-clan-field="chatLanguage.name"></th>
+                </tr>
+              </thead>
+            </table>
+          </section>
+        </div>
+      </main>
+      <main class="main-table">
+        <section class="table-header">
+          <h2>Clan Capital Districts</h2>
+          <div class="export__file">
+            <label for="export-file-main-member" class="export__file-btn" title="Export File" style="
+          background: #fff6 url('/static/home-page-icons/export_img_final.png') center / 65% no-repeat;
+       "></label>
+            <input type="checkbox" id="export-file-main-member">
+            <div class="export__file-options">
+              <label>Export As &nbsp; &#10140;</label>
+              <label for="export-file-main-member" id="toPDFDistrictsTable">PDF <img src="./static/home-page-icons/pdf_icon_img_final.png" alt="PDF">
+              </label>
+              <label for="export-file-main-member" id="toJSONDistrictsTable">JSON <img src="./static/home-page-icons/json_icon_img_final.png" alt="JSON">
+              </label>
+              <label for="export-file-main-member" id="toCSVDistrictsTable">CSV <img src="./static/home-page-icons/csv_icon_img_final.png" alt="CSV">
+              </label>
+              <label for="export-file-main-member" id="toEXCELDistrictsTable">EXCEL <img src="./static/home-page-icons/xls_icon_img_final.png" alt="Excel">
+              </label>
+            </div>
+          </div>
+          <div class="input-group">
+            <input type="search" placeholder="Search Data...">
+            <img src="./static/home-page-icons/search_img_final.png" alt="Search">
+          </div>
+        </section>
+        <section class="table-body">
+          <table>
+            <thead>
+              <tr>
+                <th>Name <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>District Hall Level <span class="icon-arrow">&UpArrow;</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="clan-capital-districts"></tbody>
+          </table>
+        </section>
+      </main>
+      <main class="main-not-member-table">
+        <section class="table-header">
+          <h2>Clan Member Details</h2>
+          <div class="export__file">
+            <label for="export-file-not-member" class="export__file-btn" title="Export File" style="
+          background: #fff6 url('/static/home-page-icons/export_img_final.png') center / 65% no-repeat;
+       "></label>
+            <input type="checkbox" id="export-file-not-member">
+            <div class="export__file-options">
+              <label>Export As &nbsp; &#10140;</label>
+              <label for="export-file-not-member" id="toPDFMemberListTable">PDF <img src="./static/home-page-icons/pdf_icon_img_final.png" alt="PDF">
+              </label>
+              <label for="export-file-not-member" id="toJSONMemberListTable">JSON <img src="./static/home-page-icons/json_icon_img_final.png" alt="JSON">
+              </label>
+              <label for="export-file-not-member" id="toCSVMemberListTable">CSV <img src="./static/home-page-icons/csv_icon_img_final.png" alt="CSV">
+              </label>
+              <label for="export-file-not-member" id="toEXCELMemberListTable">EXCEL <img src="./static/home-page-icons/xls_icon_img_final.png" alt="Excel">
+              </label>
+            </div>
+          </div>
+          <div class="input-group">
+            <input type="search" placeholder="Search Data...">
+            <img src="./static/home-page-icons/search_img_final.png" alt="Search">
+          </div>
+        </section>
+        <section class="table-body">
+          <table>
+            <thead>
+              <tr>
+                <th>Tag <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Name <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Role <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Town Hall Level <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Experience Level <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>League Tier <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>League Tier Badge <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Trophies <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Builder Base Trophies <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Clan Rank <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Previous Clan Rank <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Donations <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Donations Received <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Builder Base League <span class="icon-arrow">&UpArrow;</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="clan-member-list"></tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+    <script src="js/table-utils.js"></script>
+    <script src="js/clan-details.js"></script>
+  </body>
+</html>

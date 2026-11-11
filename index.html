@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ancient Ruins</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="static/clan-badge_19.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="nav-item">
+          <img src="/static/nav-bar-icons/home_img.png" alt="Home" class="nav-icon">
+        </a>
+        <div class="dropdown">
+          <a class="nav-item">
+            <img src="/static/nav-bar-icons/api_img.png" alt="API" class="nav-icon">
+          </a>
+          <div class="dropdown-content">
+            <a href="http://localhost:8000/json/clan_members_table_data.json">Clan Members API</a>
+            <a href="http://localhost:8000/json/former_clan_members_table_data.json">Former Members API</a>
+            <a href="http://localhost:8000/json/top_clan_contributors_data.json">Top Contributors API</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="nav-item">
+            <img src="static/nav-bar-icons/graph_img.png" alt="Graphs" class="nav-icon">
+          </a>
+          <div class="dropdown-content">
+            <a href="graph.html">Graphs</a>
+            <a href="all-mon-graph.html">All Months Graphs</a>
+          </div>
+        </div>
+        <a href="dashboard.html" class="nav-item">
+          <img src="/static/nav-bar-icons/player-analytics_img.png" alt="Analytics" class="nav-icon">
+        </a>
+        <div class="dropdown">
+          <a href="#" class="nav-item">
+            <img src="static/nav-bar-icons/ai_img.png" alt="AI" class="nav-icon">
+          </a>
+          <div class="dropdown-content">
+            <a href="ai-prediction.html">AI Prediction</a>
+            <a href="ai-cluster.html">AI Cluster</a>
+            <a href="ai-chat.html">AR STATS BOT</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="nav-item">
+            <img src="static/nav-bar-icons/github_img.png" alt="GitHub" class="nav-icon">
+          </a>
+          <div class="dropdown-content">
+            <a href="https://github.com/Lightning-President-9/coc-ancient-ruins-website">Website Repo</a>
+            <a href="https://github.com/Lightning-President-9/ClanDataRepo">Clan Data Repo</a>
+          </div>
+        </div>
+        <a href="https://link.clashofclans.com/en?action=OpenClanProfile&tag=2PP0P22CQ" class="nav-item">
+          <img src="/static/nav-bar-icons/invite_img.png" alt="Invite" class="nav-icon">
+        </a>
+        <a href="https://discord.gg/XyucEsBhGs" class="nav-item">
+          <img src="/static/nav-bar-icons/discord_img.png" alt="Discord" class="nav-icon">
+        </a>
+        <a href="coc-data.html" class="nav-item">
+          <img src="static/nav-bar-icons/coc-data_img.png" alt="COC Data" class="nav-icon">
+        </a>
+        <a href="#" class="nav-item" id="capture-page" title="Take Screenshot">
+          <img src="static/nav-bar-icons/screenshot_img.png" alt="Screenshot" class="nav-icon">
+        </a>
+      </nav>
+      <script src="js/screenshot.js"></script>
+      <main class="main-clan-table">
+        <section class="table-header">
+          <h2>Ancient Ruins</h2>
+        </section>
+        <div class="data-box">
+          <div class="img-box">
+            <div class="img">
+              <img src=".././static/clan-badge_19.png" alt="Clan-Badge-Image" />
+            </div>
+            <div class="p-data">
+              <strong>
+                <p>
+                  <u>SINCE WHEN HAS DATA BEEN RECORDED</u>
+                </p>
+                <p>WAR SINCE 15TH OCTOBER 2022</p>
+                <p>CLAN CAPITAL SINCE 21ST FEBRUARY 2023</p>
+                <p>CLAN GAMES SINCE 28TH FEBRUARY 2023</p>
+              </strong>
+            </div>
+          </div>
+          <section class="table-body">
+            <table>
+              <thead>
+                <tr>
+                  <td>
+                    <strong>Clan Name:</strong>
+                  </td>
+                  <th>Ancient Ruins</th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan Level:</strong>
+                  </td>
+                  <th>19</th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan Tag:</strong>
+                  </td>
+                  <th>#2PPOP22CQ</th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Description:</strong>
+                  </td>
+                  <th>Be active and chat with respect.You will be KICKED,if you are not active.Website Link:https://coc-ancient-ruins-website.onrender.com</th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan War League:</strong>
+                  </td>
+                  <th>Gold League I</th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan Capital League:</strong>
+                  </td>
+                  <th>Silver League I</th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan Location:</strong>
+                  </td>
+                  <th>International</th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Chat Language:</strong>
+                  </td>
+                  <th>English</th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Type:</strong>
+                  </td>
+                  <th>Anyone can join</th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Required League:</strong>
+                  </td>
+                  <th>Barbarian 6</th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Required Builder Base League:</strong>
+                  </td>
+                  <th>Wood V</th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Required Town Hall Level:</strong>
+                  </td>
+                  <th>6</th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Wars Won:</strong>
+                  </td>
+                  <th>194</th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Clan Leader:</strong>
+                  </td>
+                  <th>KAI HIWATARI</th>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>War Frequency:</strong>
+                  </td>
+                  <th>Always</th>
+                </tr>
+              </thead>
+            </table>
+          </section>
+        </div>
+      </main>
+      <div class="main-table">
+        <section class="table-header">
+          <h2>Clan Link</h2>
+        </section>
+        <div class="isclaimers">
+          <p>
+            <strong>
+              <a href="https://link.clashofclans.com/en?action=OpenClanProfile&tag=2PP0P22CQ" target="_blank" rel="TEST">https://link.clashofclans.com/en?action=OpenClanProfile&tag=2PP0P22CQ</a>
+            </strong>
+          </p>
+        </div>
+      </div>
+      <div class="main-table">
+        <section class="table-header">
+          <h2>Clan Discord Link</h2>
+        </section>
+        <div class="isclaimers">
+          <p>
+            <strong>
+              <a href="https://discord.gg/XyucEsBhGs" target="_blank" rel="TEST">https://discord.gg/XyucEsBhGs</a>
+            </strong>
+          </p>
+        </div>
+      </div>
+      <main class="main-table">
+        <section class="table-header">
+          <h2>Clan Members</h2>
+          <div class="export__file">
+            <label for="export-file-main-member" class="export__file-btn" title="Export File"></label>
+            <input type="checkbox" id="export-file-main-member">
+            <div class="export__file-options">
+              <label>Export As &nbsp; &#10140;</label>
+              <label for="export-file-main-member" id="toPDFMainMemberTable">PDF <img src=".././static/home-page-icons/pdf_icon_img_final.png" alt="">
+              </label>
+              <label for="export-file-main-member" id="toJSONMainMemberTable">JSON <img src=".././static/home-page-icons/json_icon_img_final.png" alt="">
+              </label>
+              <label for="export-file-main-member" id="toCSVMainMemberTable">CSV <img src=".././static/home-page-icons/csv_icon_img_final.png" alt="">
+              </label>
+              <label for="export-file-main-member" id="toEXCELMainMemberTable">EXCEL <img src=".././static/home-page-icons/xls_icon_img_final.png" alt="">
+              </label>
+            </div>
+          </div>
+          <div class="input-group">
+            <input type="search" placeholder="Search Data...">
+            <img src=".././static/home-page-icons/search_img_final.png" alt="">
+          </div>
+        </section>
+        <section class="table-body">
+          <table id="membersTable">
+            <thead>
+              <tr>
+                <th>Srno <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Name <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>War <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>War Attack <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Clan Capital <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Clan Games <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Clan Games Maxed <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th class="sortable-header">
+                  <span class="tooltip">Clan Score <span class="tooltiptext">Clan Score = War Attack + Clan Capital + Clan Games + Clan Games Maxed</span>
+                  </span>
+                  <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Status <span class="icon-arrow">&UpArrow;</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </section>
+      </main>
+      <main class="main-not-member-table">
+        <section class="table-header">
+          <h2>Former Clan Members</h2>
+          <div class="export__file">
+            <label for="export-file-not-member" class="export__file-btn" title="Export File"></label>
+            <input type="checkbox" id="export-file-not-member">
+            <div class="export__file-options">
+              <label>Export As &nbsp; &#10140;</label>
+              <label for="export-file-not-member" id="toPDFNotMemberTable">PDF <img src=".././static/home-page-icons/pdf_icon_img_final.png" alt="">
+              </label>
+              <label for="export-file-not-member" id="toJSONNotMemberTable">JSON <img src=".././static/home-page-icons/json_icon_img_final.png" alt="">
+              </label>
+              <label for="export-file-not-member" id="toCSVNotMemberTable">CSV <img src=".././static/home-page-icons/csv_icon_img_final.png" alt="">
+              </label>
+              <label for="export-file-not-member" id="toEXCELNotMemberTable">EXCEL <img src=".././static/home-page-icons/xls_icon_img_final.png" alt="">
+              </label>
+            </div>
+          </div>
+          <div class="input-group">
+            <input type="search" placeholder="Search Data...">
+            <img src=".././static/home-page-icons/search_img_final.png" alt="">
+          </div>
+        </section>
+        <section class="table-body">
+          <table id="formerMembersTable">
+            <thead>
+              <tr>
+                <th>Srno <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Name <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>War Attack <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Clan Capital <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Clan Games <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Clan Games Maxed <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th class="sortable-header">
+                  <span class="tooltip">Clan Score <span class="tooltiptext">Clan Score = War Attack + Clan Capital + Clan Games + Clan Games Maxed</span>
+                  </span>
+                  <span class="icon-arrow">&UpArrow;</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </section>
+      </main>
+      <main class="score-table">
+        <section class="table-header">
+          <h2>Top Clan Contributors</h2>
+          <div class="export__file">
+            <label for="export-file-clan-score" class="export__file-btn" title="Export File"></label>
+            <input type="checkbox" id="export-file-clan-score">
+            <div class="export__file-options">
+              <label>Export As &nbsp; &#10140;</label>
+              <label for="export-file-clan-score" id="toPDFClanScore">PDF <img src=".././static/home-page-icons/pdf_icon_img_final.png" alt="">
+              </label>
+              <label for="export-file-clan-score" id="toJSONClanScore">JSON <img src=".././static/home-page-icons/json_icon_img_final.png" alt="">
+              </label>
+              <label for="export-file-clan-score" id="toCSVClanScore">CSV <img src=".././static/home-page-icons/csv_icon_img_final.png" alt="">
+              </label>
+              <label for="export-file-clan-score" id="toEXCELClanScore">EXCEL <img src=".././static/home-page-icons/xls_icon_img_final.png" alt="">
+              </label>
+            </div>
+          </div>
+          <div class="input-group">
+            <input type="search" placeholder="Search Data...">
+            <img src=".././static/home-page-icons/search_img_final.png" alt="">
+          </div>
+        </section>
+        <section class="table-body">
+          <table id="topScoresTable">
+            <thead>
+              <tr>
+                <th>Srno <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Name <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th class="sortable-header">
+                  <span class="tooltip">Clan Score <span class="tooltiptext">Clan Score >200</span>
+                  </span>
+                  <span class="icon-arrow">&UpArrow;</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </section>
+      </main>
+      <div class="main-table">
+        <section class="table-header">
+          <h2>API Links</h2>
+        </section>
+        <div class="isclaimers">
+          <p>
+            <strong>
+              <a href="http://localhost:8000/json/clan_members_table_data.json" target="_blank" rel="noopener noreferrer">http://localhost:8000/json/clan_members_table_data.json</a>
+            </strong>
+          </p>
+          <p>
+            <strong>
+              <a href="http://localhost:8000/json/former_clan_members_table_data.json" target="_blank" rel="noopener noreferrer">http://localhost:8000/json/former_clan_members_table_data.json</a>
+            </strong>
+          </p>
+          <p>
+            <strong>
+              <a href="http://localhost:8000/json/top_clan_contributors_data.json" target="_blank" rel="noopener noreferrer">http://localhost:8000/json/top_clan_contributors_data.json</a>
+            </strong>
+          </p>
+        </div>
+      </div>
+      <div class="main-table">
+        <section class="table-header">
+          <h2>COC Data</h2>
+        </section>
+        <div class="isclaimers">
+          <p>
+            <strong>
+              <a href="http://localhost:8000/coc-data.html" target="_blank" rel="noopener noreferrer">http://localhost:8000/coc-data.html</a>
+            </strong>
+          </p>
+        </div>
+      </div>
+      <div class="main-table">
+        <section class="table-header">
+          <h2>Graphs</h2>
+        </section>
+        <div class="isclaimers">
+          <p>
+            <strong>
+              <a href="http://localhost:8000/graph.html" target="_self" rel="TEST">http://localhost:8000/graph.html</a>
+            </strong>
+          </p>
+          <p>
+            <strong>
+              <a href="http://localhost:8000/all-mon-graph.html" target="_self" rel="TEST">http://localhost:8000/all-mon-graph.html</a>
+            </strong>
+          </p>
+        </div>
+      </div>
+      <div class="main-table">
+        <section class="table-header">
+          <h2>Player Analytics</h2>
+        </section>
+        <div class="isclaimers">
+          <p>
+            <strong>
+              <a href="http://localhost:8000/dashboard.html" target="_self" rel="TEST">http://localhost:8000/dashboard.html</a>
+            </strong>
+          </p>
+        </div>
+      </div>
+      <div class="main-table">
+        <section class="table-header">
+          <h2>AI</h2>
+        </section>
+        <div class="isclaimers">
+          <p>
+            <strong>
+              <a href="http://localhost:8000/ai-prediction.html" target="_self" rel="TEST">http://localhost:8000/ai-prediction.html</a>
+            </strong>
+          </p>
+          <p>
+            <strong>
+              <a href="http://localhost:8000/ai-cluster.html" target="_self" rel="TEST">http://localhost:8000/ai-cluster.html</a>
+            </strong>
+          </p>
+          <p>
+            <strong>
+              <a href="http://localhost:8000/ai-chat.html" target="_self" rel="TEST">http://localhost:8000/ai-chat.html</a>
+            </strong>
+          </p>
+        </div>
+      </div>
+      <div class="main-table">
+        <section class="table-header">
+          <h2>GitHub Repositories Links</h2>
+        </section>
+        <div class="isclaimers">
+          <p>
+            <strong>
+              <a href="https://github.com/Lightning-President-9/coc-ancient-ruins-website" target="_blank" rel="TEST">https://github.com/Lightning-President-9/coc-ancient-ruins-website</a>
+            </strong>
+          </p>
+          <p>
+            <strong>
+              <a href="https://github.com/Lightning-President-9/ClanDataRepo" target="_blank" rel="TEST">https://github.com/Lightning-President-9/ClanDataRepo</a>
+            </strong>
+          </p>
+        </div>
+      </div>
+      <div class="main-table">
+        <section class="table-header">
+          <h2>Main Website Link</h2>
+        </section>
+        <div class="isclaimers">
+          <p>
+            <strong>
+              <a href="https://coc-ancient-ruins-website.onrender.com/" target="_blank" rel="TEST">https://coc-ancient-ruins-website.onrender.com/</a>
+            </strong>
+          </p>
+        </div>
+      </div>
+      <div class="main-table">
+        <section class="table-header">
+          <h2>Feedback Form</h2>
+        </section>
+        <div class="isclaimers">
+          <p>
+            <strong>
+              <a href="https://forms.gle/6DSeYo31A4bksH9F6" target="_blank" rel="TEST">https://forms.gle/6DSeYo31A4bksH9F6</a>
+            </strong>
+          </p>
+        </div>
+      </div>
+      <div class="main-table">
+        <section class="table-header">
+          <h2>Disclaimers</h2>
+        </section>
+        <div class="disclaimers">
+          <ul>
+            <li>This website is intended for personal and non-commercial use only.</li>
+            <li>The information provided on this website may not be accurate, current, or complete.</li>
+            <li>Unauthorized use or reproduction of content is prohibited.</li>
+            <li>
+              <b>This material is unofficial and is not endorsed by Supercell.</b>
+            </li>
+            <li>
+              <b>For more information see Supercell's Fan Content Policy: <a href="https://supercell.com/en/fan-content-policy" target="_blank" rel="TEST">www.supercell.com/fan-content-policy</a>. </b>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

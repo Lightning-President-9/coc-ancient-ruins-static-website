@@ -1,0 +1,35 @@
+{
+    "count": 6,
+    "graphs": [
+        {
+            "id": 1,
+            "file": "fig1.json",
+            "title": "Line Chart of warattack by Name"
+        },
+        {
+            "id": 2,
+            "file": "fig2.json",
+            "title": "Line Chart of clancapital by Name"
+        },
+        {
+            "id": 3,
+            "file": "fig3.json",
+            "title": "Line Chart of clangames by Name"
+        },
+        {
+            "id": 4,
+            "file": "fig4.json",
+            "title": "Line Chart of clangamesmaxed by Name"
+        },
+        {
+            "id": 5,
+            "file": "fig5.json",
+            "title": "Line Chart of clanscore by Name"
+        },
+        {
+            "id": 6,
+            "file": "fig6.json",
+            "title": "Line Chart of Multiple Metrics by Name"
+        }
+    ]
+}

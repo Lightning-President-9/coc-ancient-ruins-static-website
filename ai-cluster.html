@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Cluster | Ancient Ruins</title>
+    <link rel="icon" href="static/clan-badge_19.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/graph.css">
+    <script src="https://cdn.plot.ly/plotly-3.1.0.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="nav-item">
+        <img src="/static/nav-bar-icons/home_img.png" alt="Home" class="nav-icon">
+      </a>
+      <div class="dropdown">
+        <a class="nav-item">
+          <img src="/static/nav-bar-icons/api_img.png" alt="API" class="nav-icon">
+        </a>
+        <div class="dropdown-content">
+          <a href="http://localhost:8000/json/clan_members_table_data.json">Clan Members API</a>
+          <a href="http://localhost:8000/json/former_clan_members_table_data.json">Former Members API</a>
+          <a href="http://localhost:8000/json/top_clan_contributors_data.json">Top Contributors API</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#" class="nav-item">
+          <img src="static/nav-bar-icons/graph_img.png" alt="Graphs" class="nav-icon">
+        </a>
+        <div class="dropdown-content">
+          <a href="graph.html">Graphs</a>
+          <a href="all-mon-graph.html">All Months Graphs</a>
+        </div>
+      </div>
+      <a href="dashboard.html" class="nav-item">
+        <img src="/static/nav-bar-icons/player-analytics_img.png" alt="Analytics" class="nav-icon">
+      </a>
+      <div class="dropdown">
+        <a href="#" class="nav-item">
+          <img src="static/nav-bar-icons/ai_img.png" alt="AI" class="nav-icon">
+        </a>
+        <div class="dropdown-content">
+          <a href="ai-prediction.html">AI Prediction</a>
+          <a href="ai-cluster.html">AI Cluster</a>
+          <a href="ai-chat.html">AR STATS BOT</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#" class="nav-item">
+          <img src="static/nav-bar-icons/github_img.png" alt="GitHub" class="nav-icon">
+        </a>
+        <div class="dropdown-content">
+          <a href="https://github.com/Lightning-President-9/coc-ancient-ruins-website">Website Repo</a>
+          <a href="https://github.com/Lightning-President-9/ClanDataRepo">Clan Data Repo</a>
+        </div>
+      </div>
+      <a href="https://link.clashofclans.com/en?action=OpenClanProfile&tag=2PP0P22CQ" class="nav-item">
+        <img src="/static/nav-bar-icons/invite_img.png" alt="Invite" class="nav-icon">
+      </a>
+      <a href="https://discord.gg/XyucEsBhGs" class="nav-item">
+        <img src="/static/nav-bar-icons/discord_img.png" alt="Discord" class="nav-icon">
+      </a>
+      <a href="coc-data.html" class="nav-item">
+        <img src="static/nav-bar-icons/coc-data_img.png" alt="COC Data" class="nav-icon">
+      </a>
+      <a href="#" class="nav-item" id="capture-page" title="Take Screenshot">
+        <img src="static/nav-bar-icons/screenshot_img.png" alt="Screenshot" class="nav-icon">
+      </a>
+    </nav>
+    <script src="js/screenshot.js"></script>
+    <h1 id="page-title"> AI Cluster</h1>
+    <div id="controls-container">
+      <label for="range-select"> Month: </label>
+      <select id="range-select">
+        <option value="01_to_02"> JAN-FEB </option>
+        <option value="02_to_03"> FEB-MAR </option>
+        <option value="03_to_04"> MAR-APR </option>
+        <option value="04_to_05"> APR-MAY </option>
+        <option value="05_to_06"> MAY-JUN </option>
+        <option value="06_to_07"> JUN-JUL </option>
+        <option value="07_to_08"> JUL-AUG </option>
+        <option value="08_to_09"> AUG-SEP </option>
+        <option value="09_to_10" selected> SEP-OCT </option>
+        <option value="10_to_11"> OCT-NOV </option>
+        <option value="11_to_12"> NOV-DEC </option>
+        <option value="12_to_01"> DEC-JAN </option>
+      </select>
+      <label for="range-year"> Year: </label>
+      <select id="range-year">
+        <option value="2024"> 2024 </option>
+        <option value="2025"> 2025 </option>
+        <option value="2026" selected> 2026 </option>
+      </select>
+      <button type="button" id="load-graphs"> Fetch Data </button>
+    </div>
+    <div id="status-message" class="alert-message"></div>
+    <div id="charts-container"></div>
+    <script src="js/ai-cluster.js"></script>
+  </body>
+</html>

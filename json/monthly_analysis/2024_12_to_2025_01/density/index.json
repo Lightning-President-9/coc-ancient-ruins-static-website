@@ -1,0 +1,55 @@
+{
+    "count": 10,
+    "graphs": [
+        {
+            "id": 1,
+            "file": "fig1.json",
+            "title": "Density Plot of warattack vs clancapital"
+        },
+        {
+            "id": 2,
+            "file": "fig2.json",
+            "title": "Density Plot of warattack vs clangames"
+        },
+        {
+            "id": 3,
+            "file": "fig3.json",
+            "title": "Density Plot of warattack vs clangamesmaxed"
+        },
+        {
+            "id": 4,
+            "file": "fig4.json",
+            "title": "Density Plot of warattack vs clanscore"
+        },
+        {
+            "id": 5,
+            "file": "fig5.json",
+            "title": "Density Plot of clancapital vs clangames"
+        },
+        {
+            "id": 6,
+            "file": "fig6.json",
+            "title": "Density Plot of clancapital vs clangamesmaxed"
+        },
+        {
+            "id": 7,
+            "file": "fig7.json",
+            "title": "Density Plot of clancapital vs clanscore"
+        },
+        {
+            "id": 8,
+            "file": "fig8.json",
+            "title": "Density Plot of clangames vs clangamesmaxed"
+        },
+        {
+            "id": 9,
+            "file": "fig9.json",
+            "title": "Density Plot of clangames vs clanscore"
+        },
+        {
+            "id": 10,
+            "file": "fig10.json",
+            "title": "Density Plot of clangamesmaxed vs clanscore"
+        }
+    ]
+}

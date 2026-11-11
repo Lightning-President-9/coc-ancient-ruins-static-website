@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Clan Players | Ancient Ruins</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="static/clan-badge_19.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  </head>
+  <style>
+    .main-table {
+      height: 400px !important;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="nav-item">
+          <img src="/static/nav-bar-icons/home_img.png" alt="Home" class="nav-icon">
+        </a>
+        <div class="dropdown">
+          <a class="nav-item">
+            <img src="/static/nav-bar-icons/api_img.png" alt="API" class="nav-icon">
+          </a>
+          <div class="dropdown-content">
+            <a href="http://localhost:8000/json/clan_members_table_data.json">Clan Members API</a>
+            <a href="http://localhost:8000/json/former_clan_members_table_data.json">Former Members API</a>
+            <a href="http://localhost:8000/json/top_clan_contributors_data.json">Top Contributors API</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="nav-item">
+            <img src="static/nav-bar-icons/graph_img.png" alt="Graphs" class="nav-icon">
+          </a>
+          <div class="dropdown-content">
+            <a href="graph.html">Graphs</a>
+            <a href="all-mon-graph.html">All Months Graphs</a>
+          </div>
+        </div>
+        <a href="dashboard.html" class="nav-item">
+          <img src="/static/nav-bar-icons/player-analytics_img.png" alt="Analytics" class="nav-icon">
+        </a>
+        <div class="dropdown">
+          <a href="#" class="nav-item">
+            <img src="static/nav-bar-icons/ai_img.png" alt="AI" class="nav-icon">
+          </a>
+          <div class="dropdown-content">
+            <a href="ai-prediction.html">AI Prediction</a>
+            <a href="ai-cluster.html">AI Cluster</a>
+            <a href="ai-chat.html">AR STATS BOT</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="nav-item">
+            <img src="static/nav-bar-icons/github_img.png" alt="GitHub" class="nav-icon">
+          </a>
+          <div class="dropdown-content">
+            <a href="https://github.com/Lightning-President-9/coc-ancient-ruins-website">Website Repo</a>
+            <a href="https://github.com/Lightning-President-9/ClanDataRepo">Clan Data Repo</a>
+          </div>
+        </div>
+        <a href="https://link.clashofclans.com/en?action=OpenClanProfile&tag=2PP0P22CQ" class="nav-item">
+          <img src="/static/nav-bar-icons/invite_img.png" alt="Invite" class="nav-icon">
+        </a>
+        <a href="https://discord.gg/XyucEsBhGs" class="nav-item">
+          <img src="/static/nav-bar-icons/discord_img.png" alt="Discord" class="nav-icon">
+        </a>
+        <a href="coc-data.html" class="nav-item">
+          <img src="static/nav-bar-icons/coc-data_img.png" alt="COC Data" class="nav-icon">
+        </a>
+        <a href="#" class="nav-item" id="capture-page" title="Take Screenshot">
+          <img src="static/nav-bar-icons/screenshot_img.png" alt="Screenshot" class="nav-icon">
+        </a>
+      </nav>
+      <script src="js/screenshot.js"></script>
+      <section class="summary-section" style="width: 90%; margin: 1rem auto;">
+        <div class="summary-card">
+          <div class="card-title">Select Player</div>
+          <select id="player-selector" style="width:100%; padding:12px; border-radius:8px; font-size:16px;">
+            <option value="">Loading players...</option>
+          </select>
+        </div>
+      </section>
+      <main class="main-table">
+        <section class="table-header">
+          <h2>Player Overview</h2>
+          <div class="export__file">
+            <label for="export-file-main-member-1" class="export__file-btn" title="Export File" style="background: #fff6 url('../../static/home-page-icons/export_img_final.png') center / 65% no-repeat;"></label>
+            <input type="checkbox" id="export-file-main-member-1">
+            <div class="export__file-options">
+              <label>Export As &nbsp; &#10140;</label>
+              <label for="export-file-main-member-1" id="toPDFPlayerOverview"> PDF <img src="../../static/home-page-icons/pdf_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-1" id="toJSONPlayerOverview"> JSON <img src="../../static/home-page-icons/json_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-1" id="toCSVPlayerOverview"> CSV <img src="../../static/home-page-icons/csv_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-1" id="toEXCELPlayerOverview"> EXCEL <img src="../../static/home-page-icons/xls_icon_img_final.png">
+              </label>
+            </div>
+          </div>
+          <div class="input-group">
+            <input type="search" placeholder="Search Data...">
+            <img src="../../static/home-page-icons/search_img_final.png">
+          </div>
+        </section>
+        <section class="table-body">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Tag</th>
+                <th>Town Hall</th>
+                <th>Town Hall Weapon</th>
+                <th>Exp Level</th>
+                <th>Trophies</th>
+                <th>Best Trophies</th>
+                <th>War Stars</th>
+                <th>Attack Wins</th>
+                <th>Defense Wins</th>
+                <th>Role</th>
+                <th>War Preference</th>
+                <th>Donations</th>
+                <th>Donations Received</th>
+                <th>Clan Capital Contributions</th>
+              </tr>
+            </thead>
+            <tbody id="player-overview-body"></tbody>
+          </table>
+        </section>
+      </main>
+      <main class="main-table">
+        <section class="table-header">
+          <h2>Clan Information</h2>
+          <div class="export__file">
+            <label for="export-file-main-member-2" class="export__file-btn" title="Export File" style="background: #fff6 url('../../static/home-page-icons/export_img_final.png') center / 65% no-repeat;"></label>
+            <input type="checkbox" id="export-file-main-member-2">
+            <div class="export__file-options">
+              <label>Export As &nbsp; &#10140;</label>
+              <label for="export-file-main-member-2" id="toPDFClanInformation"> PDF <img src="../../static/home-page-icons/pdf_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-2" id="toJSONClanInformation"> JSON <img src="../../static/home-page-icons/json_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-2" id="toCSVClanInformation"> CSV <img src="../../static/home-page-icons/csv_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-2" id="toEXCELClanInformation"> EXCEL <img src="../../static/home-page-icons/xls_icon_img_final.png">
+              </label>
+            </div>
+          </div>
+          <div class="input-group">
+            <input type="search" placeholder="Search Data...">
+            <img src="../../static/home-page-icons/search_img_final.png">
+          </div>
+        </section>
+        <section class="table-body">
+          <table>
+            <thead>
+              <tr>
+                <th>Clan Tag</th>
+                <th>Clan Name</th>
+                <th>Clan Level</th>
+                <th>Clan Badge</th>
+              </tr>
+            </thead>
+            <tbody id="player-clan-body"></tbody>
+          </table>
+        </section>
+      </main>
+      <main class="main-table">
+        <section class="table-header">
+          <h2>League Information</h2>
+          <div class="export__file">
+            <label for="export-file-main-member-3" class="export__file-btn" title="Export File" style="background: #fff6 url('../../static/home-page-icons/export_img_final.png') center / 65% no-repeat;"></label>
+            <input type="checkbox" id="export-file-main-member-3">
+            <div class="export__file-options">
+              <label>Export As &nbsp; &#10140;</label>
+              <label for="export-file-main-member-3" id="toPDFLeagueInformation"> PDF <img src="../../static/home-page-icons/pdf_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-3" id="toJSONLeagueInformation"> JSON <img src="../../static/home-page-icons/json_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-3" id="toCSVLeagueInformation"> CSV <img src="../../static/home-page-icons/csv_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-3" id="toEXCELLeagueInformation"> EXCEL <img src="../../static/home-page-icons/xls_icon_img_final.png">
+              </label>
+            </div>
+          </div>
+          <div class="input-group">
+            <input type="search" placeholder="Search Data...">
+            <img src="../../static/home-page-icons/search_img_final.png">
+          </div>
+        </section>
+        <section class="table-body">
+          <table>
+            <thead>
+              <tr>
+                <th>League Name</th>
+                <th>League Icon</th>
+                <th>Builder Base League</th>
+              </tr>
+            </thead>
+            <tbody id="player-league-body"></tbody>
+          </table>
+        </section>
+      </main>
+      <main class="main-table">
+        <section class="table-header">
+          <h2>Player Achievements</h2>
+          <div class="export__file">
+            <label for="export-file-main-member-4" class="export__file-btn" title="Export File" style="background: #fff6 url('../../static/home-page-icons/export_img_final.png') center / 65% no-repeat;"></label>
+            <input type="checkbox" id="export-file-main-member-4">
+            <div class="export__file-options">
+              <label>Export As &nbsp; &#10140;</label>
+              <label for="export-file-main-member-4" id="toPDFPlayerAchievements"> PDF <img src="../../static/home-page-icons/pdf_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-4" id="toJSONPlayerAchievements"> JSON <img src="../../static/home-page-icons/json_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-4" id="toCSVPlayerAchievements"> CSV <img src="../../static/home-page-icons/csv_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-4" id="toEXCELPlayerAchievements"> EXCEL <img src="../../static/home-page-icons/xls_icon_img_final.png">
+              </label>
+            </div>
+          </div>
+          <div class="input-group">
+            <input type="search" placeholder="Search Data...">
+            <img src="../../static/home-page-icons/search_img_final.png">
+          </div>
+        </section>
+        <section class="table-body">
+          <table>
+            <thead>
+              <tr>
+                <th>Name <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Stars <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Value <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Target <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Info <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Completion Info <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Village <span class="icon-arrow">&UpArrow;</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="player-achievements-body"></tbody>
+          </table>
+        </section>
+      </main>
+      <main class="main-table">
+        <section class="table-header">
+          <h2>Hero Equipment</h2>
+          <div class="export__file">
+            <label for="export-file-main-member-5" class="export__file-btn" title="Export File" style="background: #fff6 url('../../static/home-page-icons/export_img_final.png') center / 65% no-repeat;"></label>
+            <input type="checkbox" id="export-file-main-member-5">
+            <div class="export__file-options">
+              <label>Export As &nbsp; &#10140;</label>
+              <label for="export-file-main-member-5" id="toPDFHeroEquipment"> PDF <img src="../../static/home-page-icons/pdf_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-5" id="toJSONHeroEquipment"> JSON <img src="../../static/home-page-icons/json_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-5" id="toCSVHeroEquipment"> CSV <img src="../../static/home-page-icons/csv_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-5" id="toEXCELHeroEquipment"> EXCEL <img src="../../static/home-page-icons/xls_icon_img_final.png">
+              </label>
+            </div>
+          </div>
+          <div class="input-group">
+            <input type="search" placeholder="Search Data...">
+            <img src="../../static/home-page-icons/search_img_final.png">
+          </div>
+        </section>
+        <section class="table-body">
+          <table>
+            <thead>
+              <tr>
+                <th>Name <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Level <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Max Level <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Village <span class="icon-arrow">&UpArrow;</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="player-hero-equipment-body"></tbody>
+          </table>
+        </section>
+      </main>
+      <main class="main-table">
+        <section class="table-header">
+          <h2>Player Spells</h2>
+          <div class="export__file">
+            <label for="export-file-main-member-6" class="export__file-btn" title="Export File" style="background: #fff6 url('../../static/home-page-icons/export_img_final.png') center / 65% no-repeat;"></label>
+            <input type="checkbox" id="export-file-main-member-6">
+            <div class="export__file-options">
+              <label>Export As &nbsp; &#10140;</label>
+              <label for="export-file-main-member-6" id="toPDFPlayerSpells"> PDF <img src="../../static/home-page-icons/pdf_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-6" id="toJSONPlayerSpells"> JSON <img src="../../static/home-page-icons/json_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-6" id="toCSVPlayerSpells"> CSV <img src="../../static/home-page-icons/csv_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-6" id="toEXCELPlayerSpells"> EXCEL <img src="../../static/home-page-icons/xls_icon_img_final.png">
+              </label>
+            </div>
+          </div>
+          <div class="input-group">
+            <input type="search" placeholder="Search Data...">
+            <img src="../../static/home-page-icons/search_img_final.png">
+          </div>
+        </section>
+        <section class="table-body">
+          <table>
+            <thead>
+              <tr>
+                <th>Name <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Level <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Max Level <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Village <span class="icon-arrow">&UpArrow;</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="player-spells-body"></tbody>
+          </table>
+        </section>
+      </main>
+      <main class="main-table">
+        <section class="table-header">
+          <h2>Player Troops</h2>
+          <div class="export__file">
+            <label for="export-file-main-member-7" class="export__file-btn" title="Export File" style="background: #fff6 url('../../static/home-page-icons/export_img_final.png') center / 65% no-repeat;"></label>
+            <input type="checkbox" id="export-file-main-member-7">
+            <div class="export__file-options">
+              <label>Export As &nbsp; &#10140;</label>
+              <label for="export-file-main-member-7" id="toPDFPlayerTroops"> PDF <img src="../../static/home-page-icons/pdf_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-7" id="toJSONPlayerTroops"> JSON <img src="../../static/home-page-icons/json_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-7" id="toCSVPlayerTroops"> CSV <img src="../../static/home-page-icons/csv_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-7" id="toEXCELPlayerTroops"> EXCEL <img src="../../static/home-page-icons/xls_icon_img_final.png">
+              </label>
+            </div>
+          </div>
+          <div class="input-group">
+            <input type="search" placeholder="Search Data...">
+            <img src="../../static/home-page-icons/search_img_final.png">
+          </div>
+        </section>
+        <section class="table-body">
+          <table>
+            <thead>
+              <tr>
+                <th>Name <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Level <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Max Level <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Village <span class="icon-arrow">&UpArrow;</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="player-troops-body"></tbody>
+          </table>
+        </section>
+      </main>
+      <main class="main-table">
+        <section class="table-header">
+          <h2>Player Heroes</h2>
+          <div class="export__file">
+            <label for="export-file-main-member-8" class="export__file-btn" title="Export File" style="background: #fff6 url('../../static/home-page-icons/export_img_final.png') center / 65% no-repeat;"></label>
+            <input type="checkbox" id="export-file-main-member-8">
+            <div class="export__file-options">
+              <label>Export As &nbsp; &#10140;</label>
+              <label for="export-file-main-member-8" id="toPDFPlayerHeroes"> PDF <img src="../../static/home-page-icons/pdf_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-8" id="toJSONPlayerHeroes"> JSON <img src="../../static/home-page-icons/json_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-8" id="toCSVPlayerHeroes"> CSV <img src="../../static/home-page-icons/csv_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-8" id="toEXCELPlayerHeroes"> EXCEL <img src="../../static/home-page-icons/xls_icon_img_final.png">
+              </label>
+            </div>
+          </div>
+          <div class="input-group">
+            <input type="search" placeholder="Search Data...">
+            <img src="../../static/home-page-icons/search_img_final.png">
+          </div>
+        </section>
+        <section class="table-body">
+          <table>
+            <thead>
+              <tr>
+                <th>Name <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Level <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Max Level <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Village <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Equipment <span class="icon-arrow">&UpArrow;</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="player-heroes-body"></tbody>
+          </table>
+        </section>
+      </main>
+      <main class="main-table">
+        <section class="table-header">
+          <h2>Player Labels</h2>
+          <div class="export__file">
+            <label for="export-file-main-member-9" class="export__file-btn" title="Export File" style="background: #fff6 url('../../static/home-page-icons/export_img_final.png') center / 65% no-repeat;"></label>
+            <input type="checkbox" id="export-file-main-member-9">
+            <div class="export__file-options">
+              <label>Export As &nbsp; &#10140;</label>
+              <label for="export-file-main-member-9" id="toPDFPlayerLabels"> PDF <img src="../../static/home-page-icons/pdf_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-9" id="toJSONPlayerLabels"> JSON <img src="../../static/home-page-icons/json_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-9" id="toCSVPlayerLabels"> CSV <img src="../../static/home-page-icons/csv_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-9" id="toEXCELPlayerLabels"> EXCEL <img src="../../static/home-page-icons/xls_icon_img_final.png">
+              </label>
+            </div>
+          </div>
+          <div class="input-group">
+            <input type="search" placeholder="Search Data...">
+            <img src="../../static/home-page-icons/search_img_final.png">
+          </div>
+        </section>
+        <section class="table-body">
+          <table>
+            <thead>
+              <tr>
+                <th>ID <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Name <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>Icon <span class="icon-arrow">&UpArrow;</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="player-labels-body"></tbody>
+          </table>
+        </section>
+      </main>
+      <main class="main-table">
+        <section class="table-header">
+          <h2>Player House Elements</h2>
+          <div class="export__file">
+            <label for="export-file-main-member-10" class="export__file-btn" title="Export File" style="background: #fff6 url('../../static/home-page-icons/export_img_final.png') center / 65% no-repeat;"></label>
+            <input type="checkbox" id="export-file-main-member-10">
+            <div class="export__file-options">
+              <label>Export As &nbsp; &#10140;</label>
+              <label for="export-file-main-member-10" id="toPDFPlayerHouseElements"> PDF <img src="../../static/home-page-icons/pdf_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-10" id="toJSONPlayerHouseElements"> JSON <img src="../../static/home-page-icons/json_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-10" id="toCSVPlayerHouseElements"> CSV <img src="../../static/home-page-icons/csv_icon_img_final.png">
+              </label>
+              <label for="export-file-main-member-10" id="toEXCELPlayerHouseElements"> EXCEL <img src="../../static/home-page-icons/xls_icon_img_final.png">
+              </label>
+            </div>
+          </div>
+          <div class="input-group">
+            <input type="search" placeholder="Search Data...">
+            <img src="../../static/home-page-icons/search_img_final.png">
+          </div>
+        </section>
+        <section class="table-body">
+          <table>
+            <thead>
+              <tr>
+                <th>Type <span class="icon-arrow">&UpArrow;</span>
+                </th>
+                <th>ID <span class="icon-arrow">&UpArrow;</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="player-house-elements-body"></tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+    <script src="js/table-utils.js"></script>
+    <script src="js/clan-players.js"></script>
+  </body>
+</html>

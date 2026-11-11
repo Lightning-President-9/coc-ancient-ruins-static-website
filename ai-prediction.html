@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="icon" href="static/clan-badge_19.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/graph.css">
+    <title>AI Prediction | Ancient Ruins</title>
+    <script src="https://cdn.plot.ly/plotly-3.1.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .prediction-container {
+        width: 95%;
+        max-width: 95vw;
+        margin: 0 auto;
+      }
+
+      .prediction-graph {
+        position: relative;
+        width: 100%;
+        margin-bottom: 25px;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      .prediction-graph h2 {
+        margin: 0 0 15px;
+        font-size: 20px;
+      }
+
+      .prediction-chart-wrapper {
+        position: relative;
+        width: 100%;
+      }
+
+      .prediction-chart {
+        width: 100%;
+        min-height: 500px;
+      }
+
+      .graph-player-select {
+        position: absolute;
+        top: 45px;
+        right: 28px;
+        z-index: 100;
+        width: 160px;
+        height: 34px;
+        padding: 5px 28px 5px 10px;
+        background: #fff;
+        border: 1px solid #c7cdd6;
+        border-radius: 4px;
+        color: #344563;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 12px;
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+      }
+
+      .graph-player-select:hover {
+        border-color: #aeb6c2;
+      }
+
+      .graph-player-select:focus {
+        outline: none;
+        border-color: #c7cdd6;
+        box-shadow: none;
+      }
+
+      .graph-player-select option {
+        color: #344563;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 12px;
+        background: #fff;
+      }
+
+      .loading {
+        padding: 40px;
+        text-align: center;
+        font-size: 18px;
+      }
+
+      .error {
+        padding: 30px;
+        color: red;
+        text-align: center;
+      }
+
+      @media (max-width: 700px) {
+        body {
+          padding-top: 40px;
+        }
+
+        .prediction-graph {
+          padding: 10px;
+        }
+
+        .prediction-chart {
+          min-height: 400px;
+        }
+
+        .graph-player-select {
+          top: 55px;
+          right: 18px;
+          width: 135px;
+          height: 32px;
+          font-size: 11px;
+        }
+
+        .graph-player-select option {
+          font-size: 11px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="nav-item">
+        <img src="/static/nav-bar-icons/home_img.png" alt="Home" class="nav-icon">
+      </a>
+      <div class="dropdown">
+        <a class="nav-item">
+          <img src="/static/nav-bar-icons/api_img.png" alt="API" class="nav-icon">
+        </a>
+        <div class="dropdown-content">
+          <a href="http://localhost:8000/json/clan_members_table_data.json">Clan Members API</a>
+          <a href="http://localhost:8000/json/former_clan_members_table_data.json">Former Members API</a>
+          <a href="http://localhost:8000/json/top_clan_contributors_data.json">Top Contributors API</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#" class="nav-item">
+          <img src="static/nav-bar-icons/graph_img.png" alt="Graphs" class="nav-icon">
+        </a>
+        <div class="dropdown-content">
+          <a href="graph.html">Graphs</a>
+          <a href="all-mon-graph.html">All Months Graphs</a>
+        </div>
+      </div>
+      <a href="dashboard.html" class="nav-item">
+        <img src="/static/nav-bar-icons/player-analytics_img.png" alt="Analytics" class="nav-icon">
+      </a>
+      <div class="dropdown">
+        <a href="#" class="nav-item">
+          <img src="static/nav-bar-icons/ai_img.png" alt="AI" class="nav-icon">
+        </a>
+        <div class="dropdown-content">
+          <a href="ai-prediction.html">AI Prediction</a>
+          <a href="ai-cluster.html">AI Cluster</a>
+          <a href="ai-chat.html">AR STATS BOT</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#" class="nav-item">
+          <img src="static/nav-bar-icons/github_img.png" alt="GitHub" class="nav-icon">
+        </a>
+        <div class="dropdown-content">
+          <a href="https://github.com/Lightning-President-9/coc-ancient-ruins-website">Website Repo</a>
+          <a href="https://github.com/Lightning-President-9/ClanDataRepo">Clan Data Repo</a>
+        </div>
+      </div>
+      <a href="https://link.clashofclans.com/en?action=OpenClanProfile&tag=2PP0P22CQ" class="nav-item">
+        <img src="/static/nav-bar-icons/invite_img.png" alt="Invite" class="nav-icon">
+      </a>
+      <a href="https://discord.gg/XyucEsBhGs" class="nav-item">
+        <img src="/static/nav-bar-icons/discord_img.png" alt="Discord" class="nav-icon">
+      </a>
+      <a href="coc-data.html" class="nav-item">
+        <img src="static/nav-bar-icons/coc-data_img.png" alt="COC Data" class="nav-icon">
+      </a>
+      <a href="#" class="nav-item" id="capture-page" title="Take Screenshot">
+        <img src="static/nav-bar-icons/screenshot_img.png" alt="Screenshot" class="nav-icon">
+      </a>
+    </nav>
+    <script src="js/screenshot.js"></script>
+    <main class="prediction-container">
+      <h1 id="page-title"> AI Prediction </h1>
+      <div id="predictionGraphs"></div>
+    </main>
+    <script src="js/ai-prediction.js"></script>
+  </body>
+</html>
